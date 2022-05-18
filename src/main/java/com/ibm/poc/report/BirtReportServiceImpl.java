@@ -64,7 +64,6 @@ public class BirtReportServiceImpl implements BirtReportService {
 		if (!reports.containsKey(reportName)) {
 			loadReports();
 		}
-		System.out.println();
 		switch (output) {
 		case PDF:
 			generatePDFReport(reports.get(reportName), response, request, body);

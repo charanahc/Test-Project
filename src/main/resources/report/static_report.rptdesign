@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201606072122</property>
+    <text-property name="title">Sample Report</text-property>
+    <page-setup>
+        <simple-master-page name="Page Master" id="2"/>
+    </page-setup>
+    <body>
+        <grid id="3">
+            <property name="width">100%</property>
+            <column id="4"/>
+            <column id="5"/>
+            <row id="6">
+                <cell id="7">
+                    <image id="9">
+                        <property name="source">url</property>
+                        <expression name="uri">"https://www.baeldung.com/wp-content/themes/baeldung/favicon/favicon-96x96.png"</expression>
+                    </image>
+                </cell>
+                <cell id="8">
+                    <label id="10">
+                        <text-property name="text">Hello, Baeldung world!</text-property>
+                    </label>
+                </cell>
+            </row>
+        </grid>
+        <table id="11653">
+            <property name="dataSet">CallTreeList</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">CALLTREE_CONTACT_NAME</property>
+                    <text-property name="displayName">CALLTREE_CONTACT_NAME</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CALLTREE_CONTACT_NAME"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">CALLTREE_CONTACT_NUMBER</property>
+                    <text-property name="displayName">CALLTREE_CONTACT_NUMBER</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CALLTREE_CONTACT_NUMBER"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">CALLTREE_RESOURCE_ROLE</property>
+                    <text-property name="displayName">CALLTREE_RESOURCE_ROLE</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CALLTREE_RESOURCE_ROLE"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">CALLTREE_CONTACT_STATUS</property>
+                    <text-property name="displayName">CALLTREE_CONTACT_STATUS</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CALLER_ID"]</expression>
+                    <property name="dataType">integer</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">CALLTREE_CONTACTED_DATE</property>
+                    <text-property name="displayName">CALLTREE_CONTACTED_DATE</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CALLTREE_CONTACT_STATUS"]</expression>
+                    <property name="dataType">date-time</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">CALLTREE_REASON</property>
+                    <text-property name="displayName">CALLTREE_REASON</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CALLTREE_CONTACTED_DATE"]</expression>
+                    <property name="dataType">integer</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">CONTACTED</property>
+                    <text-property name="displayName">CONTACTED</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CALLTREE_REASON"]</expression>
+                    <property name="dataType">integer</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding</property>
+                    <text-property name="displayName">CONTACTED</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CONTACTED"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <column id="11692"/>
+            <column id="11693"/>
+            <column id="11694"/>
+            <column id="11695"/>
+            <column id="11696"/>
+            <column id="11697"/>
+            <column id="11698"/>
+            <column id="11702"/>
+            <header>
+                <row id="11654">
+                    <property name="fontWeight">bold</property>
+                    <cell id="11655">
+                        <label id="11656">
+                            <text-property name="text">Name</text-property>
+                        </label>
+                    </cell>
+                    <cell id="11657">
+                        <label id="11658">
+                            <text-property name="text">Contact Number</text-property>
+                        </label>
+                    </cell>
+                    <cell id="11659">
+                        <label id="11660">
+                            <text-property name="text">BCM Role</text-property>
+                        </label>
+                    </cell>
+                    <cell id="11661">
+                        <label id="11662">
+                            <text-property name="text">Caller Name</text-property>
+                        </label>
+                    </cell>
+                    <cell id="11663">
+                        <label id="11664">
+                            <text-property name="text">Contact Status</text-property>
+                        </label>
+                    </cell>
+                    <cell id="11665">
+                        <label id="11666">
+                            <property name="textAlign">center</property>
+                            <text-property name="text">Contacted Date	</text-property>
+                        </label>
+                    </cell>
+                    <cell id="11667">
+                        <label id="11668">
+                            <property name="textAlign">justify</property>
+                            <text-property name="text">Reason for Contact Un-Successful	</text-property>
+                        </label>
+                    </cell>
+                    <cell id="11699">
+                        <label id="11703">
+                            <text-property name="text">Contacted</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="11669">
+                    <cell id="11670">
+                        <data id="11671">
+                            <property name="resultSetColumn">CALLTREE_CONTACT_NAME</property>
+                        </data>
+                    </cell>
+                    <cell id="11672">
+                        <data id="11673">
+                            <property name="resultSetColumn">CALLTREE_CONTACT_NUMBER</property>
+                        </data>
+                    </cell>
+                    <cell id="11674">
+                        <data id="11675">
+                            <property name="resultSetColumn">CALLTREE_RESOURCE_ROLE</property>
+                        </data>
+                    </cell>
+                    <cell id="11676">
+                        <data id="11677">
+                            <property name="resultSetColumn">CALLTREE_CONTACT_STATUS</property>
+                        </data>
+                    </cell>
+                    <cell id="11678">
+                        <data id="11679">
+                            <property name="resultSetColumn">CALLTREE_CONTACTED_DATE</property>
+                        </data>
+                    </cell>
+                    <cell id="11680">
+                        <data id="11681">
+                            <property name="resultSetColumn">CALLTREE_REASON</property>
+                        </data>
+                    </cell>
+                    <cell id="11682">
+                        <data id="11683">
+                            <property name="resultSetColumn">CONTACTED</property>
+                        </data>
+                    </cell>
+                    <cell id="11700">
+                        <data id="11705">
+                            <property name="resultSetColumn">Column Binding</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+        </table>
+    </body>
+</report>

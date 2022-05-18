@@ -1,0 +1,2141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201606072122</property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">144</property>
+    <parameters>
+        <scalar-parameter name="PROJECT_ID" id="6299">
+            <text-property name="helpText">PROJECT_ID</text-property>
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="21">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">com.ibm.db2.jcc.DB2Driver</property>
+            <property name="odaURL">jdbc:db2://tgadalbcmt101.sl.bluecloud.ibm.com:50000/BCMPHP</property>
+            <property name="odaUser">db2inst1</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">VGdhYmNtY2xvdWRAMDkyMDIx</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="test" id="6298">
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">COUNTRY_CODE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">COUNTRY_CODE</text-property>
+                    <text-property name="heading">COUNTRY_CODE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PROJECT_ID</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">PROJECT_ID</text-property>
+                    <text-property name="heading">PROJECT_ID</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PROJECT_TYPE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">PROJECT_TYPE</text-property>
+                    <text-property name="heading">PROJECT_TYPE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PROJECT_NAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">PROJECT_NAME</text-property>
+                    <text-property name="heading">PROJECT_NAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PMP_PROJECT_NAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">PMP_PROJECT_NAME</text-property>
+                    <text-property name="heading">PMP_PROJECT_NAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PMP_CLIENT_CODE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">PMP_CLIENT_CODE</text-property>
+                    <text-property name="heading">PMP_CLIENT_CODE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PMP_CLIENT_NAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">PMP_CLIENT_NAME</text-property>
+                    <text-property name="heading">PMP_CLIENT_NAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DEPT_CODE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">DEPT_CODE</text-property>
+                    <text-property name="heading">DEPT_CODE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PROJECT_MANAGER</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">PROJECT_MANAGER</text-property>
+                    <text-property name="heading">PROJECT_MANAGER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PAL</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">PAL</text-property>
+                    <text-property name="heading">PAL</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PMO</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">PMO</text-property>
+                    <text-property name="heading">PMO</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">IBM_GEO_PM</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">IBM_GEO_PM</text-property>
+                    <text-property name="heading">IBM_GEO_PM</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">SECTOR</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">SECTOR</text-property>
+                    <text-property name="heading">SECTOR</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">INDUSTRY</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">INDUSTRY</text-property>
+                    <text-property name="heading">INDUSTRY</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PRIMARY_LOCATION_ID</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">PRIMARY_LOCATION_ID</text-property>
+                    <text-property name="heading">PRIMARY_LOCATION_ID</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PROJECT_START_DATE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">PROJECT_START_DATE</text-property>
+                    <text-property name="heading">PROJECT_START_DATE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PROJECT_END_DATE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">PROJECT_END_DATE</text-property>
+                    <text-property name="heading">PROJECT_END_DATE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PROJECT_STATUS</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">PROJECT_STATUS</text-property>
+                    <text-property name="heading">PROJECT_STATUS</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">IGA_ACCOUNT_NAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">IGA_ACCOUNT_NAME</text-property>
+                    <text-property name="heading">IGA_ACCOUNT_NAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">IGA_ACCOUNT_MANAGER</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">IGA_ACCOUNT_MANAGER</text-property>
+                    <text-property name="heading">IGA_ACCOUNT_MANAGER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">NUMBER_OF_OFFSHORE_RESOURCES</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">NUMBER_OF_OFFSHORE_RESOURCES</text-property>
+                    <text-property name="heading">NUMBER_OF_OFFSHORE_RESOURCES</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">NUMBER_OF_ONSITE_RESOURCES</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">NUMBER_OF_ONSITE_RESOURCES</text-property>
+                    <text-property name="heading">NUMBER_OF_ONSITE_RESOURCES</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">HOST_COUNTRY</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">HOST_COUNTRY</text-property>
+                    <text-property name="heading">HOST_COUNTRY</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CONTRACT_NUMBER</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CONTRACT_NUMBER</text-property>
+                    <text-property name="heading">CONTRACT_NUMBER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">IBM_INDIA_SERVICE_LINE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">IBM_INDIA_SERVICE_LINE</text-property>
+                    <text-property name="heading">IBM_INDIA_SERVICE_LINE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ACCOUNT_NAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">ACCOUNT_NAME</text-property>
+                    <text-property name="heading">ACCOUNT_NAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PROJECT_WORK_CLASSIFICATION</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">PROJECT_WORK_CLASSIFICATION</text-property>
+                    <text-property name="heading">PROJECT_WORK_CLASSIFICATION</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">TRANSITION_INVOLVED</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">TRANSITION_INVOLVED</text-property>
+                    <text-property name="heading">TRANSITION_INVOLVED</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">TRANSITION_START_DATE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">TRANSITION_START_DATE</text-property>
+                    <text-property name="heading">TRANSITION_START_DATE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">TRANSITION_END_DATE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">TRANSITION_END_DATE</text-property>
+                    <text-property name="heading">TRANSITION_END_DATE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DOU_SIGNED</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">DOU_SIGNED</text-property>
+                    <text-property name="heading">DOU_SIGNED</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DOU_END_DATE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">DOU_END_DATE</text-property>
+                    <text-property name="heading">DOU_END_DATE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DOU_WAIVER</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">DOU_WAIVER</text-property>
+                    <text-property name="heading">DOU_WAIVER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">BUSINESS_UNIT</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">BUSINESS_UNIT</text-property>
+                    <text-property name="heading">BUSINESS_UNIT</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ANNOUNCED_DATE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">ANNOUNCED_DATE</text-property>
+                    <text-property name="heading">ANNOUNCED_DATE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">SOURCE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">SOURCE</text-property>
+                    <text-property name="heading">SOURCE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">REGION</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">REGION</text-property>
+                    <text-property name="heading">REGION</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">GEO</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">GEO</text-property>
+                    <text-property name="heading">GEO</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">COMMERCIAL_CONTRACT_ID</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">COMMERCIAL_CONTRACT_ID</text-property>
+                    <text-property name="heading">COMMERCIAL_CONTRACT_ID</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">MOD_GCN</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">MOD_GCN</text-property>
+                    <text-property name="heading">MOD_GCN</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">MOD_BU_HEAD</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">MOD_BU_HEAD</text-property>
+                    <text-property name="heading">MOD_BU_HEAD</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PRACTICE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">PRACTICE</text-property>
+                    <text-property name="heading">PRACTICE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CIC_INDIA_DELIVERY_TYPE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CIC_INDIA_DELIVERY_TYPE</text-property>
+                    <text-property name="heading">CIC_INDIA_DELIVERY_TYPE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CHARGE_COUNTRY</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CHARGE_COUNTRY</text-property>
+                    <text-property name="heading">CHARGE_COUNTRY</text-property>
+                </structure>
+            </list-property>
+            <list-property name="filter"/>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">param_1</property>
+                    <property name="paramName">PROJECT_ID</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">1</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">COUNTRY_CODE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">PROJECT_ID</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">PROJECT_TYPE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">PROJECT_NAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">PMP_PROJECT_NAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">PMP_CLIENT_CODE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">PMP_CLIENT_NAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">DEPT_CODE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">PROJECT_MANAGER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">PAL</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">PMO</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">IBM_GEO_PM</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">SECTOR</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">INDUSTRY</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">PRIMARY_LOCATION_ID</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">16</property>
+                        <property name="name">PROJECT_START_DATE</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">17</property>
+                        <property name="name">PROJECT_END_DATE</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">18</property>
+                        <property name="name">PROJECT_STATUS</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">19</property>
+                        <property name="name">IGA_ACCOUNT_NAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">20</property>
+                        <property name="name">IGA_ACCOUNT_MANAGER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">21</property>
+                        <property name="name">NUMBER_OF_OFFSHORE_RESOURCES</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">22</property>
+                        <property name="name">NUMBER_OF_ONSITE_RESOURCES</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">23</property>
+                        <property name="name">HOST_COUNTRY</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">24</property>
+                        <property name="name">CONTRACT_NUMBER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">25</property>
+                        <property name="name">IBM_INDIA_SERVICE_LINE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">26</property>
+                        <property name="name">ACCOUNT_NAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">27</property>
+                        <property name="name">PROJECT_WORK_CLASSIFICATION</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">28</property>
+                        <property name="name">TRANSITION_INVOLVED</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">29</property>
+                        <property name="name">TRANSITION_START_DATE</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">30</property>
+                        <property name="name">TRANSITION_END_DATE</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">31</property>
+                        <property name="name">DOU_SIGNED</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">32</property>
+                        <property name="name">DOU_END_DATE</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">33</property>
+                        <property name="name">DOU_WAIVER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">34</property>
+                        <property name="name">BUSINESS_UNIT</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">35</property>
+                        <property name="name">ANNOUNCED_DATE</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">36</property>
+                        <property name="name">SOURCE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">37</property>
+                        <property name="name">REGION</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">38</property>
+                        <property name="name">GEO</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">39</property>
+                        <property name="name">COMMERCIAL_CONTRACT_ID</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">40</property>
+                        <property name="name">MOD_GCN</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">41</property>
+                        <property name="name">MOD_BU_HEAD</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">42</property>
+                        <property name="name">PRACTICE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">43</property>
+                        <property name="name">CIC_INDIA_DELIVERY_TYPE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">44</property>
+                        <property name="name">CHARGE_COUNTRY</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">COUNTRY_CODE</property>
+                    <property name="nativeName">COUNTRY_CODE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">PROJECT_ID</property>
+                    <property name="nativeName">PROJECT_ID</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">PROJECT_TYPE</property>
+                    <property name="nativeName">PROJECT_TYPE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">PROJECT_NAME</property>
+                    <property name="nativeName">PROJECT_NAME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">PMP_PROJECT_NAME</property>
+                    <property name="nativeName">PMP_PROJECT_NAME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">PMP_CLIENT_CODE</property>
+                    <property name="nativeName">PMP_CLIENT_CODE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">PMP_CLIENT_NAME</property>
+                    <property name="nativeName">PMP_CLIENT_NAME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">DEPT_CODE</property>
+                    <property name="nativeName">DEPT_CODE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">PROJECT_MANAGER</property>
+                    <property name="nativeName">PROJECT_MANAGER</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">PAL</property>
+                    <property name="nativeName">PAL</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">PMO</property>
+                    <property name="nativeName">PMO</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">IBM_GEO_PM</property>
+                    <property name="nativeName">IBM_GEO_PM</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">SECTOR</property>
+                    <property name="nativeName">SECTOR</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">INDUSTRY</property>
+                    <property name="nativeName">INDUSTRY</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">PRIMARY_LOCATION_ID</property>
+                    <property name="nativeName">PRIMARY_LOCATION_ID</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">16</property>
+                    <property name="name">PROJECT_START_DATE</property>
+                    <property name="nativeName">PROJECT_START_DATE</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">17</property>
+                    <property name="name">PROJECT_END_DATE</property>
+                    <property name="nativeName">PROJECT_END_DATE</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">18</property>
+                    <property name="name">PROJECT_STATUS</property>
+                    <property name="nativeName">PROJECT_STATUS</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">19</property>
+                    <property name="name">IGA_ACCOUNT_NAME</property>
+                    <property name="nativeName">IGA_ACCOUNT_NAME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">20</property>
+                    <property name="name">IGA_ACCOUNT_MANAGER</property>
+                    <property name="nativeName">IGA_ACCOUNT_MANAGER</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">21</property>
+                    <property name="name">NUMBER_OF_OFFSHORE_RESOURCES</property>
+                    <property name="nativeName">NUMBER_OF_OFFSHORE_RESOURCES</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">3</property>
+                </structure>
+                <structure>
+                    <property name="position">22</property>
+                    <property name="name">NUMBER_OF_ONSITE_RESOURCES</property>
+                    <property name="nativeName">NUMBER_OF_ONSITE_RESOURCES</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">3</property>
+                </structure>
+                <structure>
+                    <property name="position">23</property>
+                    <property name="name">HOST_COUNTRY</property>
+                    <property name="nativeName">HOST_COUNTRY</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">24</property>
+                    <property name="name">CONTRACT_NUMBER</property>
+                    <property name="nativeName">CONTRACT_NUMBER</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">25</property>
+                    <property name="name">IBM_INDIA_SERVICE_LINE</property>
+                    <property name="nativeName">IBM_INDIA_SERVICE_LINE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">26</property>
+                    <property name="name">ACCOUNT_NAME</property>
+                    <property name="nativeName">ACCOUNT_NAME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">27</property>
+                    <property name="name">PROJECT_WORK_CLASSIFICATION</property>
+                    <property name="nativeName">PROJECT_WORK_CLASSIFICATION</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">28</property>
+                    <property name="name">TRANSITION_INVOLVED</property>
+                    <property name="nativeName">TRANSITION_INVOLVED</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">29</property>
+                    <property name="name">TRANSITION_START_DATE</property>
+                    <property name="nativeName">TRANSITION_START_DATE</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">30</property>
+                    <property name="name">TRANSITION_END_DATE</property>
+                    <property name="nativeName">TRANSITION_END_DATE</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">31</property>
+                    <property name="name">DOU_SIGNED</property>
+                    <property name="nativeName">DOU_SIGNED</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">32</property>
+                    <property name="name">DOU_END_DATE</property>
+                    <property name="nativeName">DOU_END_DATE</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">33</property>
+                    <property name="name">DOU_WAIVER</property>
+                    <property name="nativeName">DOU_WAIVER</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">34</property>
+                    <property name="name">BUSINESS_UNIT</property>
+                    <property name="nativeName">BUSINESS_UNIT</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">35</property>
+                    <property name="name">ANNOUNCED_DATE</property>
+                    <property name="nativeName">ANNOUNCED_DATE</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">36</property>
+                    <property name="name">SOURCE</property>
+                    <property name="nativeName">SOURCE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">37</property>
+                    <property name="name">REGION</property>
+                    <property name="nativeName">REGION</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">38</property>
+                    <property name="name">GEO</property>
+                    <property name="nativeName">GEO</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">39</property>
+                    <property name="name">COMMERCIAL_CONTRACT_ID</property>
+                    <property name="nativeName">COMMERCIAL_CONTRACT_ID</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">40</property>
+                    <property name="name">MOD_GCN</property>
+                    <property name="nativeName">MOD_GCN</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">41</property>
+                    <property name="name">MOD_BU_HEAD</property>
+                    <property name="nativeName">MOD_BU_HEAD</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">42</property>
+                    <property name="name">PRACTICE</property>
+                    <property name="nativeName">PRACTICE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">43</property>
+                    <property name="name">CIC_INDIA_DELIVERY_TYPE</property>
+                    <property name="nativeName">CIC_INDIA_DELIVERY_TYPE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">44</property>
+                    <property name="name">CHARGE_COUNTRY</property>
+                    <property name="nativeName">CHARGE_COUNTRY</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select *
+from BCMPHP.PROJECT_DB WHERE PROJECT_ID=?]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>COUNTRY_CODE</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>3</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>COUNTRY_CODE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>COUNTRY_CODE</design:label>
+            <design:formattingHints>
+              <design:displaySize>3</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PROJECT_ID</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>20</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>PROJECT_ID</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PROJECT_ID</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PROJECT_TYPE</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>200</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>PROJECT_TYPE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PROJECT_TYPE</design:label>
+            <design:formattingHints>
+              <design:displaySize>200</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PROJECT_NAME</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>150</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>PROJECT_NAME</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PROJECT_NAME</design:label>
+            <design:formattingHints>
+              <design:displaySize>150</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PMP_PROJECT_NAME</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>300</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>PMP_PROJECT_NAME</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PMP_PROJECT_NAME</design:label>
+            <design:formattingHints>
+              <design:displaySize>300</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PMP_CLIENT_CODE</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>20</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>PMP_CLIENT_CODE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PMP_CLIENT_CODE</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PMP_CLIENT_NAME</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>240</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>PMP_CLIENT_NAME</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PMP_CLIENT_NAME</design:label>
+            <design:formattingHints>
+              <design:displaySize>240</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>DEPT_CODE</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>20</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>DEPT_CODE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>DEPT_CODE</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PROJECT_MANAGER</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>200</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>PROJECT_MANAGER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PROJECT_MANAGER</design:label>
+            <design:formattingHints>
+              <design:displaySize>200</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PAL</design:name>
+              <design:position>10</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>200</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>PAL</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PAL</design:label>
+            <design:formattingHints>
+              <design:displaySize>200</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PMO</design:name>
+              <design:position>11</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>200</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>PMO</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PMO</design:label>
+            <design:formattingHints>
+              <design:displaySize>200</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>IBM_GEO_PM</design:name>
+              <design:position>12</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>200</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>IBM_GEO_PM</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>IBM_GEO_PM</design:label>
+            <design:formattingHints>
+              <design:displaySize>200</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>SECTOR</design:name>
+              <design:position>13</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>200</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>SECTOR</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>SECTOR</design:label>
+            <design:formattingHints>
+              <design:displaySize>200</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>INDUSTRY</design:name>
+              <design:position>14</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>200</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>INDUSTRY</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>INDUSTRY</design:label>
+            <design:formattingHints>
+              <design:displaySize>200</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PRIMARY_LOCATION_ID</design:name>
+              <design:position>15</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>PRIMARY_LOCATION_ID</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PRIMARY_LOCATION_ID</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PROJECT_START_DATE</design:name>
+              <design:position>16</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>PROJECT_START_DATE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PROJECT_START_DATE</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PROJECT_END_DATE</design:name>
+              <design:position>17</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>PROJECT_END_DATE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PROJECT_END_DATE</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PROJECT_STATUS</design:name>
+              <design:position>18</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>200</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>PROJECT_STATUS</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PROJECT_STATUS</design:label>
+            <design:formattingHints>
+              <design:displaySize>200</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>IGA_ACCOUNT_NAME</design:name>
+              <design:position>19</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>200</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>IGA_ACCOUNT_NAME</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>IGA_ACCOUNT_NAME</design:label>
+            <design:formattingHints>
+              <design:displaySize>200</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>IGA_ACCOUNT_MANAGER</design:name>
+              <design:position>20</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>200</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>IGA_ACCOUNT_MANAGER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>IGA_ACCOUNT_MANAGER</design:label>
+            <design:formattingHints>
+              <design:displaySize>200</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>NUMBER_OF_OFFSHORE_RESOURCES</design:name>
+              <design:position>21</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>3</design:nativeDataTypeCode>
+            <design:precision>8</design:precision>
+            <design:scale>2</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>NUMBER_OF_OFFSHORE_RESOURCES</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>NUMBER_OF_OFFSHORE_RESOURCES</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>NUMBER_OF_ONSITE_RESOURCES</design:name>
+              <design:position>22</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>3</design:nativeDataTypeCode>
+            <design:precision>8</design:precision>
+            <design:scale>2</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>NUMBER_OF_ONSITE_RESOURCES</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>NUMBER_OF_ONSITE_RESOURCES</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>HOST_COUNTRY</design:name>
+              <design:position>23</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>HOST_COUNTRY</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>HOST_COUNTRY</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CONTRACT_NUMBER</design:name>
+              <design:position>24</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>400</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CONTRACT_NUMBER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CONTRACT_NUMBER</design:label>
+            <design:formattingHints>
+              <design:displaySize>400</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>IBM_INDIA_SERVICE_LINE</design:name>
+              <design:position>25</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>200</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>IBM_INDIA_SERVICE_LINE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>IBM_INDIA_SERVICE_LINE</design:label>
+            <design:formattingHints>
+              <design:displaySize>200</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ACCOUNT_NAME</design:name>
+              <design:position>26</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>200</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>ACCOUNT_NAME</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ACCOUNT_NAME</design:label>
+            <design:formattingHints>
+              <design:displaySize>200</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PROJECT_WORK_CLASSIFICATION</design:name>
+              <design:position>27</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>250</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>PROJECT_WORK_CLASSIFICATION</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PROJECT_WORK_CLASSIFICATION</design:label>
+            <design:formattingHints>
+              <design:displaySize>250</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>TRANSITION_INVOLVED</design:name>
+              <design:position>28</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>TRANSITION_INVOLVED</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>TRANSITION_INVOLVED</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>TRANSITION_START_DATE</design:name>
+              <design:position>29</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>TRANSITION_START_DATE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>TRANSITION_START_DATE</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>TRANSITION_END_DATE</design:name>
+              <design:position>30</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>TRANSITION_END_DATE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>TRANSITION_END_DATE</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>DOU_SIGNED</design:name>
+              <design:position>31</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>DOU_SIGNED</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>DOU_SIGNED</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>DOU_END_DATE</design:name>
+              <design:position>32</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>DOU_END_DATE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>DOU_END_DATE</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>DOU_WAIVER</design:name>
+              <design:position>33</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>DOU_WAIVER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>DOU_WAIVER</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>BUSINESS_UNIT</design:name>
+              <design:position>34</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>BUSINESS_UNIT</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>BUSINESS_UNIT</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ANNOUNCED_DATE</design:name>
+              <design:position>35</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>ANNOUNCED_DATE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ANNOUNCED_DATE</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>SOURCE</design:name>
+              <design:position>36</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>100</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>SOURCE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>SOURCE</design:label>
+            <design:formattingHints>
+              <design:displaySize>100</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>REGION</design:name>
+              <design:position>37</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>REGION</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>REGION</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>GEO</design:name>
+              <design:position>38</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>20</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>GEO</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>GEO</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>COMMERCIAL_CONTRACT_ID</design:name>
+              <design:position>39</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>COMMERCIAL_CONTRACT_ID</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>COMMERCIAL_CONTRACT_ID</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>MOD_GCN</design:name>
+              <design:position>40</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>100</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>MOD_GCN</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>MOD_GCN</design:label>
+            <design:formattingHints>
+              <design:displaySize>100</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>MOD_BU_HEAD</design:name>
+              <design:position>41</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>100</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>MOD_BU_HEAD</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>MOD_BU_HEAD</design:label>
+            <design:formattingHints>
+              <design:displaySize>100</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PRACTICE</design:name>
+              <design:position>42</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>100</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>PRACTICE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PRACTICE</design:label>
+            <design:formattingHints>
+              <design:displaySize>100</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CIC_INDIA_DELIVERY_TYPE</design:name>
+              <design:position>43</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CIC_INDIA_DELIVERY_TYPE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CIC_INDIA_DELIVERY_TYPE</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CHARGE_COUNTRY</design:name>
+              <design:position>44</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CHARGE_COUNTRY</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CHARGE_COUNTRY</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="7">
+            <property name="height">0.9236111111111112in</property>
+            <column id="8"/>
+            <row id="9">
+                <property name="height">0.9236111111111112in</property>
+                <cell id="10">
+                    <property name="paddingTop">10pt</property>
+                    <property name="paddingLeft">10pt</property>
+                    <property name="paddingRight">10pt</property>
+                    <table id="22">
+                        <property name="dataSet">test</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">COUNTRY_CODE</property>
+                                <text-property name="displayName">COUNTRY_CODE</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["COUNTRY_CODE"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">PROJECT_ID</property>
+                                <text-property name="displayName">PROJECT_ID</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["PROJECT_ID"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">PROJECT_TYPE</property>
+                                <text-property name="displayName">PROJECT_TYPE</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["PROJECT_TYPE"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">PROJECT_NAME</property>
+                                <text-property name="displayName">PROJECT_NAME</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["PROJECT_NAME"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">PMP_PROJECT_NAME</property>
+                                <text-property name="displayName">PMP_PROJECT_NAME</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["PMP_PROJECT_NAME"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">PMP_CLIENT_CODE</property>
+                                <text-property name="displayName">PMP_CLIENT_CODE</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["PMP_CLIENT_CODE"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">PMP_CLIENT_NAME</property>
+                                <text-property name="displayName">PMP_CLIENT_NAME</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["PMP_CLIENT_NAME"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">DEPT_CODE</property>
+                                <text-property name="displayName">DEPT_CODE</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["DEPT_CODE"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">PROJECT_MANAGER</property>
+                                <text-property name="displayName">PROJECT_MANAGER</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["PROJECT_MANAGER"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">PAL</property>
+                                <text-property name="displayName">PAL</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["PAL"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">PMO</property>
+                                <text-property name="displayName">PMO</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["PMO"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">IBM_GEO_PM</property>
+                                <text-property name="displayName">IBM_GEO_PM</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["IBM_GEO_PM"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">SECTOR</property>
+                                <text-property name="displayName">SECTOR</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["SECTOR"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">INDUSTRY</property>
+                                <text-property name="displayName">INDUSTRY</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["INDUSTRY"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">PRIMARY_LOCATION_ID</property>
+                                <text-property name="displayName">PRIMARY_LOCATION_ID</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["PRIMARY_LOCATION_ID"]</expression>
+                                <property name="dataType">integer</property>
+                            </structure>
+                            <structure>
+                                <property name="name">PROJECT_START_DATE</property>
+                                <text-property name="displayName">PROJECT_START_DATE</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["PROJECT_START_DATE"]</expression>
+                                <property name="dataType">date</property>
+                            </structure>
+                            <structure>
+                                <property name="name">PROJECT_END_DATE</property>
+                                <text-property name="displayName">PROJECT_END_DATE</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["PROJECT_END_DATE"]</expression>
+                                <property name="dataType">date</property>
+                            </structure>
+                            <structure>
+                                <property name="name">PROJECT_STATUS</property>
+                                <text-property name="displayName">PROJECT_STATUS</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["PROJECT_STATUS"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">IGA_ACCOUNT_NAME</property>
+                                <text-property name="displayName">IGA_ACCOUNT_NAME</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["IGA_ACCOUNT_NAME"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">IGA_ACCOUNT_MANAGER</property>
+                                <text-property name="displayName">IGA_ACCOUNT_MANAGER</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["IGA_ACCOUNT_MANAGER"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">NUMBER_OF_OFFSHORE_RESOURCES</property>
+                                <text-property name="displayName">NUMBER_OF_OFFSHORE_RESOURCES</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["NUMBER_OF_OFFSHORE_RESOURCES"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">NUMBER_OF_ONSITE_RESOURCES</property>
+                                <text-property name="displayName">NUMBER_OF_ONSITE_RESOURCES</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["NUMBER_OF_ONSITE_RESOURCES"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">HOST_COUNTRY</property>
+                                <text-property name="displayName">HOST_COUNTRY</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["HOST_COUNTRY"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">CONTRACT_NUMBER</property>
+                                <text-property name="displayName">CONTRACT_NUMBER</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["CONTRACT_NUMBER"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">IBM_INDIA_SERVICE_LINE</property>
+                                <text-property name="displayName">IBM_INDIA_SERVICE_LINE</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["IBM_INDIA_SERVICE_LINE"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">ACCOUNT_NAME</property>
+                                <text-property name="displayName">ACCOUNT_NAME</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["ACCOUNT_NAME"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">PROJECT_WORK_CLASSIFICATION</property>
+                                <text-property name="displayName">PROJECT_WORK_CLASSIFICATION</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["PROJECT_WORK_CLASSIFICATION"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">TRANSITION_INVOLVED</property>
+                                <text-property name="displayName">TRANSITION_INVOLVED</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["TRANSITION_INVOLVED"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">TRANSITION_START_DATE</property>
+                                <text-property name="displayName">TRANSITION_START_DATE</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["TRANSITION_START_DATE"]</expression>
+                                <property name="dataType">date</property>
+                            </structure>
+                            <structure>
+                                <property name="name">TRANSITION_END_DATE</property>
+                                <text-property name="displayName">TRANSITION_END_DATE</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["TRANSITION_END_DATE"]</expression>
+                                <property name="dataType">date</property>
+                            </structure>
+                            <structure>
+                                <property name="name">DOU_SIGNED</property>
+                                <text-property name="displayName">DOU_SIGNED</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["DOU_SIGNED"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">DOU_END_DATE</property>
+                                <text-property name="displayName">DOU_END_DATE</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["DOU_END_DATE"]</expression>
+                                <property name="dataType">date</property>
+                            </structure>
+                            <structure>
+                                <property name="name">DOU_WAIVER</property>
+                                <text-property name="displayName">DOU_WAIVER</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["DOU_WAIVER"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">BUSINESS_UNIT</property>
+                                <text-property name="displayName">BUSINESS_UNIT</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["BUSINESS_UNIT"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">ANNOUNCED_DATE</property>
+                                <text-property name="displayName">ANNOUNCED_DATE</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["ANNOUNCED_DATE"]</expression>
+                                <property name="dataType">date</property>
+                            </structure>
+                            <structure>
+                                <property name="name">SOURCE</property>
+                                <text-property name="displayName">SOURCE</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["SOURCE"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">REGION</property>
+                                <text-property name="displayName">REGION</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["REGION"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">GEO</property>
+                                <text-property name="displayName">GEO</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["GEO"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">COMMERCIAL_CONTRACT_ID</property>
+                                <text-property name="displayName">COMMERCIAL_CONTRACT_ID</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["COMMERCIAL_CONTRACT_ID"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">MOD_GCN</property>
+                                <text-property name="displayName">MOD_GCN</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["MOD_GCN"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">MOD_BU_HEAD</property>
+                                <text-property name="displayName">MOD_BU_HEAD</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["MOD_BU_HEAD"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">PRACTICE</property>
+                                <text-property name="displayName">PRACTICE</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["PRACTICE"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">CIC_INDIA_DELIVERY_TYPE</property>
+                                <text-property name="displayName">CIC_INDIA_DELIVERY_TYPE</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["CIC_INDIA_DELIVERY_TYPE"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">CHARGE_COUNTRY</property>
+                                <text-property name="displayName">CHARGE_COUNTRY</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["CHARGE_COUNTRY"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <column id="35"/>
+                        <column id="36"/>
+                        <header>
+                            <row id="23">
+                                <cell id="24">
+                                    <label id="6289">
+                                        <text-property name="text">Id</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="25">
+                                    <label id="6290">
+                                        <text-property name="text">Name</text-property>
+                                    </label>
+                                </cell>
+                            </row>
+                        </header>
+                        <detail>
+                            <row id="27">
+                                <cell id="28">
+                                    <text-data id="6291">
+                                        <expression name="valueExpr">row["PROJECT_ID"]</expression>
+                                        <property name="contentType">html</property>
+                                    </text-data>
+                                </cell>
+                                <cell id="29">
+                                    <text-data id="6292">
+                                        <expression name="valueExpr">row["PROJECT_NAME"]</expression>
+                                        <property name="contentType">html</property>
+                                    </text-data>
+                                </cell>
+                            </row>
+                        </detail>
+                        <footer>
+                            <row id="31">
+                                <cell id="32"/>
+                                <cell id="33"/>
+                            </row>
+                        </footer>
+                    </table>
+                </cell>
+            </row>
+        </grid>
+    </body>
+    <property name="pageVariables">
+        <variable-element name="var">
+            <expression name="value" type="javascript">PH-09-00002</expression>
+            <property name="type">report</property>
+        </variable-element>
+    </property>
+</report>
